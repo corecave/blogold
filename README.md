@@ -1,6 +1,6 @@
 # About Blogold
 
-Blogold is Articles CRUD REST API that demonstrate using JWT with Laravel as task of employment at(Matrix):
+Blogold is Articles CRUD REST API that demonstrate using JWT with Laravel as task of employment at (Matrix):
 
 -   [API Docs](https://documenter.getpostman.com/view/12757027/TVYGbcoz).
 
