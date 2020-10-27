@@ -21,8 +21,9 @@ class CreateForeignKeyTable extends Migration
                 ->onDelete('CASCADE');
         });
         Schema::table('categories', function (Blueprint $table) {
-            $table->foreignId('parent_id')
-                ->constrained('categories')
+            $table->foreign('parent_id')
+                ->references('id')
+                ->on('categories')
                 ->onUpdate('CASCADE')
                 ->onDelete('CASCADE');
         });

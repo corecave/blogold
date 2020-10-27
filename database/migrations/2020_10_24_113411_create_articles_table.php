@@ -16,9 +16,10 @@ class CreateArticlesTable extends Migration
         Schema::create('articles', function (Blueprint $table) {
             $table->id();
             $table->string('title');
+            $table->string('slug')->unique();
             $table->string('featured_image')->nullable();
             $table->mediumText('excerpt')->nullable();
-            $table->enum('status', ['draft', 'publiched', 'schedualed'])->default('draft');
+            $table->enum('status', ['draft', 'published', 'schedualed'])->default('draft');
             $table->timestamp('schedualed_at')->nullable();
             $table->text('content')->nullable();
             $table->timestamps();
@@ -27,7 +28,7 @@ class CreateArticlesTable extends Migration
     }
 
     /**
-     * Reverse the migrations.
+     * Reverse the migrations.  
      *
      * @return void
      */
